@@ -53,14 +53,14 @@ class AdminController extends Controller
     public function brandEdit($id)
     {
         $brand = Brand::find($id);
-        return view('admin.brand-edit', compact('brand'));
+        return view('admin.brands-edit', compact('brand'));
     }
 
-    public function brandUpdate(Request $request, $id)
+    public function brandUpdate(Request $request)
     {
         $request->validate([
             'name' => 'required',
-            'slug' => 'required|unique:brands,slug',
+            'slug' => 'required|unique:brands,slug,'.$request->id,
             'image' => 'mimes:jpg,jpeg,png|max:2048',
         ]);
 
@@ -85,7 +85,7 @@ class AdminController extends Controller
 
         $brand->save();
 
-        return redirect()->route('admin.routes')->with('success', 'Brand has been updated successfully');
+        return redirect()->route('admin.brands')->with('success', 'Brand has been updated successfully');
     }
 
     public function GenerateBrandThumbnailsImage($image, $imageName)
