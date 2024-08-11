@@ -70,7 +70,9 @@
                                                         <i class="icon-edit-3"></i>
                                                     </div>
                                                 </a>
-                                                <form action="#" method="POST">
+                                                <form action="{{ route('admin.brand.delete', ['id'=>$brand->id]) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
                                                     <div class="item text-danger delete">
                                                         <i class="icon-trash-2"></i>
                                                     </div>
@@ -92,3 +94,27 @@
         </div>
 @endsection
 
+@push("scripts")
+    <script>
+        $(function (){
+            $('.delete').on('click',function (e) {
+                e.preventDefault();
+                var form = $(this).closest('form');
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this data!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: '#dc3545',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, cancel!'
+                }).then((result) => {
+                    if (result.isConfirmed){
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
+@endpush
