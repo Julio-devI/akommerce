@@ -32,11 +32,13 @@
                                 </div>
                             </form>
                         </div>
-                        <a class="tf-button style-1 w208" href="add-brand.html"><i
-                                class="icon-plus"></i>Add new</a>
+                        <a class="tf-button style-1 w208" href="{{ route('admin.brand.add') }}"><i class="icon-plus"></i>Add new</a>
                     </div>
                     <div class="wg-table table-all-user">
                         <div class="table-responsive">
+                            @if(Session::has('status'))
+                                <p class="alert alert-success">{{Session::get('status')}}</p>
+                            @endif
                             <table class="table table-striped table-bordered">
                                 <thead>
                                 <tr>
@@ -63,7 +65,7 @@
                                         <td><a href="#" target="_blank">1</a></td>
                                         <td>
                                             <div class="list-icon-function">
-                                                <a href="#">
+                                                <a href="{{ route('admin.brand.edit', ['id' => $brand->id]) }}">
                                                     <div class="item edit">
                                                         <i class="icon-edit-3"></i>
                                                     </div>
@@ -89,3 +91,4 @@
             </div>
         </div>
 @endsection
+
