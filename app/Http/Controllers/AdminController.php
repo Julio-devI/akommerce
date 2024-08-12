@@ -155,4 +155,42 @@ class AdminController extends Controller
 
         return redirect()->route('admin.categories')->with('status', 'Category has  been added successfully');
     }
+
+    public function categoryEdit($id)
+    {
+        $category = Category::find($id);
+        return view('admin.category-edit', compact('category'));
+    }
+
+    public function categoryUpdate(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required|unique:brands,slug,'.$request->id,
+            'image' => 'mimes:jpg,jpeg,png|max:2048',
+        ]);
+
+        $category = Category::find($request->id);
+        $category->name = $request->name;
+        $category->slug = Str::slug($request->slug);
+        if($request->hasFile('image'))
+        {
+            if(File::exists(public_path('uploads/categories'.'/'.$category->image)))
+            {
+                File::delete(public_path('uploads/categories'.'/'.$category->image));
+            }
+
+            $image = $request->file('image');
+            $file_extention = $request->file('image')->extension();
+            $file_name = Carbon::now()->timestamp.'.'.$file_extention;
+
+            $this->GenerateCategoryThumbnailsImage($image, $file_name);
+
+            $category->image = $file_name;
+        }
+
+        $category->save();
+
+        return redirect()->route('admin.categories')->with('status', 'Category has been updated successfully');
+    }
 }
