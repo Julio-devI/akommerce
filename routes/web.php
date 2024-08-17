@@ -32,4 +32,6 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
     Route::delete('/admin/category/destroy/{id}', [AdminController::class, 'categoryDelete'])->name('admin.category.delete');
 
     Route::get('/admin/products', [AdminController::class, 'products'])->name('admin.products');
+    Route::get('/admin/product/add', [AdminController::class, 'productAdd'])->name('admin.product.add');
+    Route::post('/admin/product/store', [AdminController::class, 'productStore'])->name('admin.product.store');
 });
