@@ -368,24 +368,22 @@
                                 <div class="swiper-container background-img js-swiper-slider" data-settings='{"resizeObserver": true}'>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="details.html">
+                                            <a href="{{ route('shop.product.details', ['product_slug'=>$product->slug]) }}">
                                                 <img loading="lazy" src="{{ asset('uploads/products') }}/{{$product->image}}" width="330" height="400" alt="{{ $product->name }}" class="pc__img">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
                                             @foreach(explode(",", $product->images) as $gimg)
-                                                <a href="details.html">
+                                                <a href="{{ route('shop.product.details', ['product_slug'=>$product->slug]) }}">
                                                     <img loading="lazy" src="{{ asset('uploads/products') }}/{{ $gimg }}" width="330" height="400" alt="{{ $product->name }}" class="pc__img">
                                                 </a>
                                             @endforeach
                                         </div>
                                     </div>
-                                    <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                      <use href="#icon_prev_sm" />
+                                    <span class="pc__img-prev"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="#icon_prev_sm" />
                     </svg></span>
-                                    <span class="pc__img-next"><svg width="7" height="11" viewBox="0 0 7 11"
-                                                                    xmlns="http://www.w3.org/2000/svg">
+                                    <span class="pc__img-next"><svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
                       <use href="#icon_next_sm" />
                     </svg></span>
                                 </div>
@@ -396,7 +394,7 @@
 
                             <div class="pc__info position-relative">
                                 <p class="pc__category">{{ $product->category->name }}</p>
-                                <h6 class="pc__title"><a href="details.html">{{ $product->name }}</a></h6>
+                                <h6 class="pc__title"><a href="{{ route('shop.product.details', ['product_slug'=>$product->slug]) }}">{{ $product->name }}</a></h6>
                                 <div class="product-card__price d-flex">
                                     <span class="money price">
                                         @if($product->sale_price)
