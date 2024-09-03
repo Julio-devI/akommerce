@@ -59,4 +59,6 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
     Route::get('/admin/coupon', [AdminController::class, 'coupons'])->name('admin.coupons');
     Route::get('/admin/coupon/add', [AdminController::class, 'couponAdd'])->name('admin.coupon.add');
     Route::post('/admin/coupon/store', [AdminController::class, 'couponStore'])->name('admin.coupon.store');
+    Route::get('/admin/coupon/{id}/edit', [AdminController::class, 'couponEdit'])->name('admin.coupon.edit');
+    Route::put('/admin/coupon/update', [AdminController::class, 'couponUpdate'])->name('admin.coupon.update');
 });
