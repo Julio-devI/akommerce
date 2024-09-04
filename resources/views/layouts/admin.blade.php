@@ -143,7 +143,7 @@
                             <li class="menu-item">
                                 <a href="{{ route('admin.coupons') }}" class="">
                                     <div class="icon"><i class="icon-grid"></i></div>
-                                    <div class="text">Coupns</div>
+                                    <div class="text">Coupons</div>
                                 </a>
                             </li>
 
@@ -158,6 +158,13 @@
                                 <a href="settings.html" class="">
                                     <div class="icon"><i class="icon-settings"></i></div>
                                     <div class="text">Settings</div>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#" class="">
+                                    <div class="icon"><i class="icon-settings"></i></div>
+                                    <div class="text">Nota fiscal</div>
                                 </a>
                             </li>
 
