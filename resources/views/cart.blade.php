@@ -4,6 +4,10 @@
         .text-success{
             color: #278c04;
         }
+
+        .text-danger{
+            color: #d61808;
+        }
     </style>
     <main class="pt-90">
         <div class="mb-4 pb-4"></div>
@@ -102,11 +106,21 @@
                         </tbody>
                     </table>
                     <div class="cart-table-footer">
-                        <form method="POST" action="{{ route('cart.apply.coupon') }}" class="position-relative bg-body">
-                            @csrf
-                            <input class="form-control" type="text" name="coupon_code" placeholder="Coupon Code" value="@if(Session::has('coupon')) {{ Session::get('coupon')['code'] }} Applied! @endif">
-                            <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit" value="APPLY COUPON">
-                        </form>
+
+                        @if(!Session::has('coupon'))
+                            <form method="POST" action="{{ route('cart.apply.coupon') }}" class="position-relative bg-body">
+                                @csrf
+                                <input class="form-control" type="text" name="coupon_code" placeholder="Coupon Code" value="">
+                                <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit" value="APPLY COUPON">
+                            </form>
+                        @else
+                            <form method="POST" action="{{ route('cart.remove.coupon') }}" class="position-relative bg-body">
+                                @csrf
+                                @method('DELETE')
+                                <input class="form-control" type="text" name="coupon_code" placeholder="Coupon Code" value="@if(Session::has('coupon')) {{ Session::get('coupon')['code'] }} Applied! @endif">
+                                <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit" value="REMOVE COUPON">
+                            </form>
+                        @endif
                         <form method="POST" action="{{ route('cart.clear') }}" class="position-relative bg-body">
                             @csrf
                             @method('DELETE')
