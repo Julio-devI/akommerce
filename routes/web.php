@@ -33,6 +33,8 @@ Route::delete('wishlist/clear', [WishlistController::class, 'emptyWishlist'])->n
 Route::post('/wishlist/move-to-cart/{rowId}', [WishlistController::class, 'moveToCart'])->name('wishlist.move.to.cart');
 
 Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::post('/place-an-order', [CartController::class, 'placeAnOrder'])->name('cart.place.an.order');
+Route::get('/order-confirmation', [CartController::class, 'orderConfirmation'])->name('cart.order.confirmation');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/account-dashboard', [UserController::class, 'index'])->name('user.index');
