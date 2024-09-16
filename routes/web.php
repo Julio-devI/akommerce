@@ -71,4 +71,5 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
     Route::delete('/admin/coupon/destroy/{id}', [AdminController::class, 'couponDelete'])->name('admin.coupon.delete');
 
     Route::get('/admin/orders', [AdminController::class, 'orders'])->name('admin.orders');
+    Route::get('/admin/order/{order_id}/details', [AdminController::class, 'orderDetails'])->name('admin.order.details');
 });
