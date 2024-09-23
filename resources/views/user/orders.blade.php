@@ -50,12 +50,10 @@
                                     <th class="text-center">Subtotal</th>
                                     <th class="text-center">Tax</th>
                                     <th class="text-center">Total</th>
-
                                     <th class="text-center">Status</th>
-                                    <th class="text-center">Order Date</th>
                                     <th class="text-center">Items</th>
-                                    <th class="text-center">Delivered On</th>
-                                    <th></th>
+                                    <th class="text-center">Order Date</th>
+                                    <th class="text-center">Details</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -69,9 +67,9 @@
                                             <td class="text-center">$ {{ $order->total }}</td>
                                             <td class="text-center">{{ $order->status }}</td>
                                             <td class="text-center">{{ $order->orderItems->count() }}</td>
-                                            <td class="text-center">{{ $order->delivered_date }}</td>
+                                            <td class="text-center">{{ $order->created_at }}</td>
                                             <td class="text-center">
-                                                <a href="{{ route('user.orders.details', ['order_id'=>$order->id]) }}">
+                                                <a href="{{ route('user.order.details', ['order_id'=>$order->id]) }}">
                                                     <div class="list-icon-function view-icon">
                                                         <div class="item eye">
                                                             <i class="fa fa-eye"></i>
