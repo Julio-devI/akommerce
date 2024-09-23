@@ -1,6 +1,19 @@
 @extends('layouts.app')
 @section('content')
     <style>
+        .bg-success {
+            background-color: #40c710 !important;
+        }
+
+        .bg-danger {
+            background-color: #f44032 !important;
+        }
+
+        .bg-warning {
+            background-color: #f5d700 !important;
+            color: #000;
+        }
+
         .table> :not(caption)>tr>th {
             padding: 0.625rem 1.5rem .625rem !important;
             background-color: #6a6e51 !important;
@@ -53,6 +66,7 @@
                                     <th class="text-center">Status</th>
                                     <th class="text-center">Items</th>
                                     <th class="text-center">Order Date</th>
+                                    <th class="text-center">Delivered On</th>
                                     <th class="text-center">Details</th>
                                 </tr>
                                 </thead>
@@ -65,9 +79,18 @@
                                             <td class="text-center">$ {{ $order->subtotal }}</td>
                                             <td class="text-center">$ {{ $order->tax }}</td>
                                             <td class="text-center">$ {{ $order->total }}</td>
-                                            <td class="text-center">{{ $order->status }}</td>
+                                            <td class="text-center">
+                                                @if($order->status == 'delivered')
+                                                    <span class="badge bg-success">Delivered</span>
+                                                @elseif($order->status == 'canceled')
+                                                    <span class="badge bg-danger">Canceled</span>
+                                                @else
+                                                    <span class="badge bg-warning">Ordered</span>
+                                                @endif
+                                            </td>
                                             <td class="text-center">{{ $order->orderItems->count() }}</td>
                                             <td class="text-center">{{ $order->created_at }}</td>
+                                            <td class="text-center">{{ $order->delivered_date }}</td>
                                             <td class="text-center">
                                                 <a href="{{ route('user.order.details', ['order_id'=>$order->id]) }}">
                                                     <div class="list-icon-function view-icon">

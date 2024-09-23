@@ -122,6 +122,9 @@
                                 </div>
                         </div>
                         <div class="table-responsive">
+                            @if(Session::has('status'))
+                                <p class="alert alert-success">{{ Session::get('status') }}</p>
+                            @endif
                             <table class="table table-striped table-bordered table-transaction">
                                 <tr>
                                     <th>Order No</th>
@@ -266,8 +269,43 @@
                         </table>
                     </div>
 
+                    @if($order->status == 'ordered')
+                        <div class="wg-bow mt-5 text-right">
+                            <form action="{{ route('user.order.cancel') }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <input type="hidden" name="order_id" value="{{ $order->id }}" />
+                                <button type="button" class="btn btn-danger cancel-order">Cancel Order</button>
+                            </form>
+                        </div>
+                    @endif
                 </div>
             </div>
         </section>
     </main>
 @endsection
+
+@push('scripts')
+    <script>
+        $(function (){
+            $('.cancel-order').on('click',function (e) {
+                e.preventDefault();
+                var form = $(this).closest('form');
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "you want to delete this record?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: '#dc3545',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Yes, delete it!',
+                    cancelButtonText: 'No, cancel!'
+                }).then((result) => {
+                    if (result.isConfirmed){
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
+@endpush
