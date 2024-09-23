@@ -664,13 +664,13 @@
     <div id="scrollTop" class="visually-hidden end-0"></div>
     <div class="page-overlay"></div>
 
-    <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/bootstrap-slider.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/swiper.min.js') }}"></script>
-    <script src="{{ asset('js/plugins/countdown.js') }}"></script>
-    <script src="{{ asset('js/theme.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/bootstrap-slider.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins/countdown.js') }}"></script>
+    <script src="{{ asset('assets/js/theme.js') }}"></script>
     @stack("scripts")
 </body>
 </html>
