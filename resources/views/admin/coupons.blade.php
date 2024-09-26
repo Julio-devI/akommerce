@@ -1,5 +1,14 @@
 @extends('layouts.admin')
 @section('content')
+    <style>
+        .buttonmodal{
+            background-color: #40c710;
+        }
+        .cancelbuttonmodal{
+            background-color: #d61808;
+        }
+    </style>
+
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
@@ -97,17 +106,24 @@
             $('.delete').on('click',function (e) {
                 e.preventDefault();
                 var form = $(this).closest('form');
-                Swal.fire({
+                swal({
                     title: "Are you sure?",
                     text: "Once deleted, you will not be able to recover this data!",
                     icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: '#dc3545',
-                    cancelButtonColor: '#6c757d',
-                    confirmButtonText: 'Yes, delete it!',
-                    cancelButtonText: 'No, cancel!'
+                    buttons:{
+                        cancelar:{
+                            text:"No, cancel!",
+                            value:false,
+                            className:"cancelbuttonmodal",
+                        },
+                        confirmar:{
+                            text:"Yes, delete it!",
+                            value:true,
+                            className:"buttonmodal",
+                        },
+                    },
                 }).then((result) => {
-                    if (result.isConfirmed){
+                    if (result === true){
                         form.submit();
                     }
                 });
