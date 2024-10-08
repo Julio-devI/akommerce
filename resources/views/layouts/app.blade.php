@@ -345,7 +345,7 @@
                             <a href="{{ route('cart.index') }}" class="navigation__link">Cart</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="about.html" class="navigation__link">About</a>
+                            <a href="{{ route('home.about') }}" class="navigation__link">About</a>
                         </li>
                         <li class="navigation__item">
                             <a href="{{ route('contact.index') }}" class="navigation__link">Contact</a>
@@ -432,7 +432,7 @@
                             <a href="{{ route('cart.index') }}" class="navigation__link">Cart</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="about.html" class="navigation__link">About</a>
+                            <a href="{{ route('home.about') }}" class="navigation__link">About</a>
                         </li>
                         <li class="navigation__item">
                             <a href="{{ route('contact.index') }}" class="navigation__link">Contact</a>
@@ -583,11 +583,11 @@
                 <div class="footer-column footer-menu mb-4 mb-lg-0">
                     <h6 class="sub-menu__title text-uppercase">Company</h6>
                     <ul class="sub-menu__list list-unstyled">
-                        <li class="sub-menu__item"><a href="about-2.html" class="menu-link menu-link_us-s">About Us</a></li>
+                        <li class="sub-menu__item"><a href="{{ route('home.about') }}" class="menu-link menu-link_us-s">About Us</a></li>
                         <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Careers</a></li>
                         <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Affiliates</a></li>
                         <li class="sub-menu__item"><a href="blog_list1.html" class="menu-link menu-link_us-s">Blog</a></li>
-                        <li class="sub-menu__item"><a href="contact-2.html" class="menu-link menu-link_us-s">Contact Us</a></li>
+                        <li class="sub-menu__item"><a href="{{ route('contact.index') }}" class="menu-link menu-link_us-s">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -632,8 +632,7 @@
             <div class="container d-md-flex align-items-center">
                 <span class="footer-copyright me-auto">©2024 Surfside Media</span>
                 <div class="footer-settings d-md-flex align-items-center">
-                    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Terms &amp;
-                        Conditions</a>
+                    <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Terms &amp; Conditions</a>
                 </div>
             </div>
         </div>

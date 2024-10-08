@@ -208,7 +208,6 @@
                                 </div>
                                 <div class="box-content-search">
                                     <ul id="box-content-search">
-
                                     </ul>
                                 </div>
                             </form>
