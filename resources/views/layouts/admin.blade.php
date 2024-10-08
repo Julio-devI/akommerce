@@ -22,6 +22,10 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('images/favicon.ico') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert.min.css') }}">
+
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/tooplate-mini-finance.css') }}" rel="stylesheet">
     @stack("styles")
 </head>
     <body class="body">
@@ -152,7 +156,7 @@
                             </li>
 
                             <li class="menu-item">
-                                <a href="users.html" class="">
+                                <a href="{{ route('admin.profile') }}" class="">
                                     <div class="icon"><i class="icon-user"></i></div>
                                     <div class="text">User</div>
                                 </a>
@@ -367,6 +371,10 @@
     <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
     <script src="{{ asset('js/apexcharts/apexcharts.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 
         <script>
             $(function(){

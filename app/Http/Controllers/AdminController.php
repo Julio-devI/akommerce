@@ -11,6 +11,7 @@ use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\Slide;
 use App\Models\Transaction;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -704,5 +705,16 @@ class AdminController extends Controller
         $query = $request->input('query');
         $results = Product::where('name', 'LIKE', "%{$query}%")->get()->take(8);
         return response()->json($results);
+    }
+
+    public function profile()
+    {
+        $user = auth()->user();
+        return view('admin.admin-profile', compact('user'));
+    }
+
+    public function profileEdit()
+    {
+        return view('admin.admin-profile-edit');
     }
 }
