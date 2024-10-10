@@ -135,12 +135,33 @@
                                     </li>
                                 </ul>
                             </li>
+
+                            <li class="menu-item has-children">
+                                <a href="javascript:void(0);" class="menu-item-button">
+                                    <div class="icon"><i class="icon-bookmark"></i></div>
+                                    <div class="text">Cliente</div>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a href="#" class="">
+                                            <div class="text">clientes</div>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a href="#" class="">
+                                            <div class="text">Adicionar cliente</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li class="menu-item">
                                 <a href="{{ route('admin.slides') }}" class="">
                                     <div class="icon"><i class="icon-image"></i></div>
                                     <div class="text">Slides</div>
                                 </a>
                             </li>
+
                             <li class="menu-item">
                                 <a href="{{ route('admin.coupons') }}" class="">
                                     <div class="icon"><i class="icon-grid"></i></div>
@@ -171,7 +192,7 @@
 
                             <li class="menu-item">
                                 <a href="#" class="">
-                                    <div class="icon"><i class="icon-settings"></i></div>
+                                    <div class="icon"><i class="icon-clipboard"></i></div>
                                     <div class="text">Nota fiscal</div>
                                 </a>
                             </li>
