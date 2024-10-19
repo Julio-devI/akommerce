@@ -125,7 +125,7 @@
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item">
                                         <a href="{{ route('admin.orders') }}" class="">
-                                            <div class="text">Orders</div>
+                                            <div class="text">{{ __('messages.Orders') }}</div>
                                         </a>
                                     </li>
                                     <li class="sub-menu-item">
@@ -155,6 +155,25 @@
                                 </ul>
                             </li>
 
+                            <li class="menu-item has-children">
+                                <a href="javascript:void(0);" class="menu-item-button">
+                                    <div class="icon"><i class="icon-dollar-sign"></i></div>
+                                    <div class="text">Vendas</div>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a href="#" class="">
+                                            <div class="text">Vendas</div>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a href="#" class="">
+                                            <div class="text">Adicionar Venda</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li class="menu-item">
                                 <a href="{{ route('admin.slides') }}" class="">
                                     <div class="icon"><i class="icon-image"></i></div>
@@ -172,14 +191,14 @@
                             <li class="menu-item">
                                 <a href="{{ route('admin.contacts') }}" class="">
                                     <div class="icon"><i class="icon-mail"></i></div>
-                                    <div class="text">Messages</div>
+                                    <div class="text">{{ __('messages.Messages') }}</div>
                                 </a>
                             </li>
 
                             <li class="menu-item">
                                 <a href="{{ route('admin.profile') }}" class="">
                                     <div class="icon"><i class="icon-user"></i></div>
-                                    <div class="text">User</div>
+                                    <div class="text">{{ __('messages.User') }}</div>
                                 </a>
                             </li>
 
@@ -239,6 +258,7 @@
 
                         </div>
                         <div class="header-grid">
+                            @include('components.language-switch')
 
                             <div class="popup-wrap message type-header">
                                 <div class="dropdown">

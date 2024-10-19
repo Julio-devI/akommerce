@@ -14,7 +14,7 @@
                                         <i class="icon-shopping-bag"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Total Orders</div>
+                                        <div class="body-text mb-2">{{__('messages.Total Orders')}}</div>
                                         <h4>{{ $dashboardDatas[0]->Total }}</h4>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                                         <i class="icon-shopping-bag"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Pending Orders</div>
+                                        <div class="body-text mb-2">{{ __('messages.Pending Orders')}}</div>
                                         <h4>{{ $dashboardDatas[0]->TotalOrdered }}</h4>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                         <i class="icon-shopping-bag"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Delivered Orders</div>
+                                        <div class="body-text mb-2">{{ __('messages.Delivered Orders') }}</div>
                                         <h4>{{ $dashboardDatas[0]->TotalDelivered }}</h4>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                         <i class="icon-shopping-bag"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Canceled Orders</div>
+                                        <div class="body-text mb-2">{{__('messages.Canceled Orders')}}</div>
                                         <h4>{{ $dashboardDatas[0]->TotalCanceled }}</h4>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
 
                 <div class="wg-box">
                     <div class="flex items-center justify-between">
-                        <h5>Monthly Revenue</h5>
+                        <h5>{{__('messages.Monthly Revenue')}}</h5>
                     </div>
                     <div class="flex flex-wrap gap40">
                         <div>
@@ -151,7 +151,7 @@
                             <div class="mb-2">
                                 <div class="block-legend">
                                     <div class="dot t2"></div>
-                                    <div class="text-tiny">Pending</div>
+                                    <div class="text-tiny">{{__('messages.Pending')}}</div>
                                 </div>
                             </div>
                             <div class="flex items-center gap10">

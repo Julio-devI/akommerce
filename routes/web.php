@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\WishListController;
 use Illuminate\Support\Facades\Route;
@@ -98,4 +99,6 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
 
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/admin/profile/edit', [AdminController::class, 'profileEdit'])->name('admin.profile.edit');
+
+    Route::post('/set-locale', [LanguageController::class, 'switchLang'])->name('language.swap');
 });
