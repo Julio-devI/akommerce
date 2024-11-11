@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AuthAdmin;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PaypalController;
 
 Auth::routes();
 
@@ -102,3 +103,7 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
 
     Route::post('/set-locale', [LanguageController::class, 'switchLang'])->name('language.swap');
 });
+
+Route::get('paypal', [PaypalController::class, 'paypal'])->name('paypal');
+Route::get('success', [PaypalController::class, 'success'])->name('success');
+Route::get('cancel', [PaypalController::class, 'cancel'])->name('cancel');

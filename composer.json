@@ -10,6 +10,8 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
+        "outhebox/blade-flags": "^1.5",
+        "srmklive/paypal": "~3.0",
         "surfsidemedia/shoppingcart": "^1.0"
     },
     "require-dev": {

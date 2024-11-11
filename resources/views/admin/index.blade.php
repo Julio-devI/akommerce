@@ -189,7 +189,7 @@
 
                 <div class="wg-box">
                     <div class="flex items-center justify-between">
-                        <h5>Recent orders</h5>
+                        <h5>{{__('messages.Recent orders')}}</h5>
                         <div class="dropdown default">
                             <a class="btn btn-secondary dropdown-toggle" href="{{ route('admin.orders') }}">
                                 <span class="view-all">View all</span>

@@ -65,7 +65,7 @@
                             <li class="menu-item has-children">
                                 <a href="javascript:void(0);" class="menu-item-button">
                                     <div class="icon"><i class="icon-shopping-cart"></i></div>
-                                    <div class="text">Products</div>
+                                    <div class="text">{{__('messages.Product')}}</div>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item">
@@ -75,7 +75,7 @@
                                     </li>
                                     <li class="sub-menu-item">
                                         <a href="{{ route('admin.products') }}" class="">
-                                            <div class="text">Products</div>
+                                            <div class="text">{{__('messages.Products')}}</div>
                                         </a>
                                     </li>
                                 </ul>
@@ -83,17 +83,17 @@
                             <li class="menu-item has-children">
                                 <a href="javascript:void(0);" class="menu-item-button">
                                     <div class="icon"><i class="icon-layers"></i></div>
-                                    <div class="text">Brand</div>
+                                    <div class="text">{{__('messages.Brand')}}</div>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item">
                                         <a href="{{ route('admin.brand.add') }}" class="">
-                                            <div class="text">New Brand</div>
+                                            <div class="text">{{__('messages.New Brand')}}</div>
                                         </a>
                                     </li>
                                     <li class="sub-menu-item">
                                         <a href="{{ route('admin.brands') }}" class="">
-                                            <div class="text">Brands</div>
+                                            <div class="text">{{__('messages.Brands')}}</div>
                                         </a>
                                     </li>
                                 </ul>
@@ -101,17 +101,17 @@
                             <li class="menu-item has-children">
                                 <a href="javascript:void(0);" class="menu-item-button">
                                     <div class="icon"><i class="icon-layers"></i></div>
-                                    <div class="text">Category</div>
+                                    <div class="text">{{__('messages.Category')}}</div>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item">
                                         <a href="{{ route('admin.category.add') }}" class="">
-                                            <div class="text">New Category</div>
+                                            <div class="text">{{__('messages.New Category')}}</div>
                                         </a>
                                     </li>
                                     <li class="sub-menu-item">
                                         <a href="{{ route('admin.categories') }}" class="">
-                                            <div class="text">Categories</div>
+                                            <div class="text">{{__('messages.Categories')}}</div>
                                         </a>
                                     </li>
                                 </ul>
@@ -120,7 +120,7 @@
                             <li class="menu-item has-children">
                                 <a href="javascript:void(0);" class="menu-item-button">
                                     <div class="icon"><i class="icon-file-plus"></i></div>
-                                    <div class="text">Order</div>
+                                    <div class="text">{{__('messages.Order')}}</div>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item">
@@ -184,7 +184,7 @@
                             <li class="menu-item">
                                 <a href="{{ route('admin.coupons') }}" class="">
                                     <div class="icon"><i class="icon-grid"></i></div>
-                                    <div class="text">Coupons</div>
+                                    <div class="text">{{__('messages.Coupons')}}</div>
                                 </a>
                             </li>
 
@@ -220,7 +220,7 @@
                                 <form action="{{ route('logout') }}" method="post" id="logout-form">
                                     @csrf
                                     <a href="{{ route('logout') }}" class="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                        <div class="icon"><i class="icon-settings"></i></div>
+                                        <div class="icon"><i class="icon-log-out"></i></div>
                                         <div class="text">Logout</div>
                                     </a>
                                 </form>
