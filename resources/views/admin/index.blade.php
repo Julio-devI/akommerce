@@ -29,7 +29,7 @@
                                         <i class="icon-dollar-sign"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Total Amount</div>
+                                        <div class="body-text mb-2">{{__('messages.Total Amount')}}</div>
                                         <h4>$ {{ $dashboardDatas[0]->TotalAmount }}</h4>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                         <i class="icon-dollar-sign"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Pending Orders Amount</div>
+                                        <div class="body-text mb-2">{{__('messages.Pending Orders Amount')}}</div>
                                         <h4>$ {{ $dashboardDatas[0]->TotalOrderedAmount }}</h4>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                         <i class="icon-dollar-sign"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Delivered Orders Amount</div>
+                                        <div class="body-text mb-2">{{__('messages.Delivered Orders Amount')}}</div>
                                         <h4>$ {{ $dashboardDatas[0]->TotalDeliveredAmount }}</h4>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@
                                         <i class="icon-dollar-sign"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Canceled Orders Amount</div>
+                                        <div class="body-text mb-2">{{__('messages.Canceled Orders Amount')}}</div>
                                         <h4>$ {{ $dashboardDatas[0]->TotalCanceledAmount }}</h4>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                             <div class="mb-2">
                                 <div class="block-legend">
                                     <div class="dot t2"></div>
-                                    <div class="text-tiny">Delivered</div>
+                                    <div class="text-tiny">{{__('messages.Delivered')}}</div>
                                 </div>
                             </div>
                             <div class="flex items-center gap10">
@@ -173,7 +173,7 @@
                             <div class="mb-2">
                                 <div class="block-legend">
                                     <div class="dot t2"></div>
-                                    <div class="text-tiny">Canceled</div>
+                                    <div class="text-tiny">{{__('messages.Canceled')}}</div>
                                 </div>
                             </div>
                             <div class="flex items-center gap10">
@@ -189,7 +189,7 @@
 
                 <div class="wg-box">
                     <div class="flex items-center justify-between">
-                        <h5>{{__('messages.Recent orders')}}</h5>
+                        <h5>{{__('messages.Recent Orders')}}</h5>
                         <div class="dropdown default">
                             <a class="btn btn-secondary dropdown-toggle" href="{{ route('admin.orders') }}">
                                 <span class="view-all">View all</span>
@@ -201,17 +201,17 @@
                             <table class="table table-striped table-bordered">
                                 <thead>
                                 <tr>
-                                    <th style="width:70px">OrderNo</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Phone</th>
-                                    <th class="text-center">Subtotal</th>
-                                    <th class="text-center">Tax</th>
+                                    <th style="width:70px">{{__('messages.OrderNo')}}</th>
+                                    <th class="text-center">{{__('messages.Name')}}</th>
+                                    <th class="text-center">{{__('messages.Phone')}}</th>
+                                    <th class="text-center">{{__('messages.Subtotal')}}</th>
+                                    <th class="text-center">{{__('messages.Tax')}}</th>
                                     <th class="text-center">Total</th>
 
                                     <th class="text-center">Status</th>
-                                    <th class="text-center">Order Date</th>
-                                    <th class="text-center">Total Items</th>
-                                    <th class="text-center">Delivered On</th>
+                                    <th class="text-center">{{__('messages.Order Date')}}</th>
+                                    <th class="text-center">{{__('messages.Total Items')}}</th>
+                                    <th class="text-center">{{__('messages.Delivered On')}}</th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -226,11 +226,11 @@
                                         <td class="text-center">${{ $order->total }}</td>
                                         <td class="text-center">
                                             @if($order->status == 'delivered')
-                                                <span class="badge bg-success">Delivered</span>
+                                                <span class="badge bg-success">{{__('messages.Delivered')}}</span>
                                             @elseif($order->status == 'canceled')
-                                                <span class="badge bg-danger">Canceled</span>
+                                                <span class="badge bg-danger">{{__('messages.Canceled')}}</span>
                                             @else
-                                                <span class="badge bg-warning">Ordered</span>
+                                                <span class="badge bg-warning">{{__('messages.Ordered')}}</span>
                                             @endif
                                         </td>
                                         <td class="text-center">{{ $order->created_at }}</td>
