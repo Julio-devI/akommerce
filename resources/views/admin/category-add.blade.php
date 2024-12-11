@@ -3,7 +3,7 @@
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                <h3>Category infomation</h3>
+                <h3>{{__('messages.Category infomation')}}</h3>
                 <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                     <li>
                         <a href="{{ route('admin.index') }}">
@@ -15,14 +15,14 @@
                     </li>
                     <li>
                         <a href="{{ route('admin.categories') }}">
-                            <div class="text-tiny">Categories</div>
+                            <div class="text-tiny">{{__('messages.Categories')}}</div>
                         </a>
                     </li>
                     <li>
                         <i class="icon-chevron-right"></i>
                     </li>
                     <li>
-                        <div class="text-tiny">New Category</div>
+                        <div class="text-tiny">{{__('messages.New Category')}}</div>
                     </li>
                 </ul>
             </div>
@@ -31,8 +31,8 @@
                 <form class="form-new-product form-style-1" action="{{ route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <fieldset class="name">
-                        <div class="body-title">Category Name <span class="tf-color-1">*</span></div>
-                        <input class="flex-grow" type="text" placeholder="Category name" name="name" tabindex="0" value="{{ old('name') }}" aria-required="true" required="">
+                        <div class="body-title">{{__('messages.Category Name')}} <span class="tf-color-1">*</span></div>
+                        <input class="flex-grow" type="text" placeholder="{{__('messages.Category Name')}}" name="name" tabindex="0" value="{{ old('name') }}" aria-required="true" required="">
                     </fieldset>
                     @error('name')
                     <span class="alert alert-danger text-center">{{$message}}</span>
@@ -45,7 +45,7 @@
                     <span class="alert alert-danger text-center">{{$message}}</span>
                     @enderror
                     <fieldset>
-                        <div class="body-title">Upload images <span class="tf-color-1">*</span>
+                        <div class="body-title">{{__('messages.Upload images')}} <span class="tf-color-1">*</span>
                         </div>
                         <div class="upload-image flex-grow">
                             <div class="item" id="imgpreview" style="display:none">
@@ -56,8 +56,8 @@
                                     <span class="icon">
                                         <i class="icon-upload-cloud"></i>
                                     </span>
-                                    <span class="body-text">Drop your images here or select <span
-                                            class="tf-color">click to browse</span></span>
+                                    <span class="body-text">{{__('messages.Drop your images here or select')}} <span
+                                            class="tf-color">{{__('messages.click to browse')}}</span></span>
                                     <input type="file" id="myFile" name="image" accept="image/*">
                                 </label>
                             </div>
@@ -68,7 +68,7 @@
                     @enderror
                     <div class="bot">
                         <div></div>
-                        <button class="tf-button w208" type="submit">Save</button>
+                        <button class="tf-button w208" type="submit">{{__('messages.Save')}}</button>
                     </div>
                 </form>
             </div>

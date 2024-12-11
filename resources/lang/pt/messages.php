@@ -49,4 +49,11 @@ return [
     'Category Name' => 'Nome da categoria',
     'Drop your images here or select' => 'Arraste suas imagems aqui ou selecione uma imagem',
     'click to browse' => 'Clique para procurar',
+    'Action' => 'Ação',
+    'Number Brands' => 'N° de marcas',
+    'Search here...' => 'Procure aqui...',
+    'Add new' => 'Adicionar novo',
+    'Category infomation' => 'Informações da categoria',
+    'Category name' => 'Nome da categoria',
+    'Category slug' => 'Slug da categoria',
 ];

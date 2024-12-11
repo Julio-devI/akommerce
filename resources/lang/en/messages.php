@@ -32,4 +32,8 @@ return [
     'Monthly Revenue' => 'Monthly Revenue',
     'New Category' => 'New Category',
     'Notifications' => 'Notifications',
+    'Total Amount' => 'Total Amount',
+    'Delivered Orders Amount' => 'Delivered Orders Amount',
+    'Canceled Orders Amount' => 'Canceled Orders Amount',
+    'Pending Orders Amount' => 'Pending Orders Amount',
 ];

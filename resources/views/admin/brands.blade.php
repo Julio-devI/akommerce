@@ -12,7 +12,7 @@
         <div class="main-content-inner">
             <div class="main-content-wrap">
                 <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                    <h3>Brands</h3>
+                    <h3>{{__('messages.Brands')}}</h3>
                     <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                         <li>
                             <a href="{{ route('admin.index') }}">
@@ -23,7 +23,7 @@
                             <i class="icon-chevron-right"></i>
                         </li>
                         <li>
-                            <div class="text-tiny">Brands</div>
+                            <div class="text-tiny">{{__('messages.Brands')}}</div>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="wg-filter flex-grow">
                             <form class="form-search">
                                 <fieldset class="name">
-                                    <input type="text" placeholder="Search here..." class="" name="name"
+                                    <input type="text" placeholder="{{__('messages.Search here...')}}" class="" name="name"
                                            tabindex="2" value="" aria-required="true" required="">
                                 </fieldset>
                                 <div class="button-submit">
@@ -41,7 +41,7 @@
                                 </div>
                             </form>
                         </div>
-                        <a class="tf-button style-1 w208" href="{{ route('admin.brand.add') }}"><i class="icon-plus"></i>Add new</a>
+                        <a class="tf-button style-1 w208" href="{{ route('admin.brand.add') }}"><i class="icon-plus"></i>{{__('messages.Add new')}}</a>
                     </div>
                     <div class="wg-table table-all-user">
                         <div class="table-responsive">
@@ -51,11 +51,11 @@
                             <table class="table table-striped table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
+                                    <th>{{__('messages.Number Brands')}}</th>
+                                    <th>{{__('messages.Name')}}</th>
                                     <th>Slug</th>
-                                    <th>Products</th>
-                                    <th>Action</th>
+                                    <th>{{__('messages.Products')}}</th>
+                                    <th>{{__('messages.Action')}}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
