@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Middleware\AuthAdmin;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PaypalController;
+use App\Http\Controllers\ClientController;
 
 Auth::routes();
 
@@ -92,6 +93,8 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
     Route::get('/admin/slide/{id}/edit', [AdminController::class, 'slideEdit'])->name('admin.slide.edit');
     Route::put('/admin/slide/update', [AdminController::class, 'slideUpdate'])->name('admin.slide.update');
     Route::delete('/admin/slide/{id}/destroy', [AdminController::class, 'slideDelete'])->name('admin.slide.delete');
+
+    Route::get('/admin/clients', [ClientController::class, 'clients'])->name('admin.clients');
 
     Route::get('/admin/contacts', [AdminController::class, 'contact'])->name('admin.contacts');
     Route::delete('/admin/contact/{id}/destroy', [AdminController::class, 'contactDelete'])->name('admin.contact.delete');

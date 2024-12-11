@@ -143,7 +143,7 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item">
-                                        <a href="#" class="">
+                                        <a href="{{route('admin.clients')}}" class="">
                                             <div class="text">clientes</div>
                                         </a>
                                     </li>

@@ -56,4 +56,14 @@ return [
     'Category infomation' => 'Informações da categoria',
     'Category name' => 'Nome da categoria',
     'Category slug' => 'Slug da categoria',
+    'Gender' => 'Genero',
+    'ClienteNo' => 'N° do cliente',
+    'userId' => 'identificação',
+    'e-mail' => 'E-mail',
+    'Address' => 'Endereço',
+    'Client type' => 'Tipo de cliente',
+    'birth date' => 'Data de nascimento',
+    'Postal code' => 'Codigo postal',
+    'City' => 'Cidade',
+    'Clients' => 'Clientes'
 ];
