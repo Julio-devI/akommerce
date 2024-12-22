@@ -65,5 +65,10 @@ return [
     'birth date' => 'Data de nascimento',
     'Postal code' => 'Codigo postal',
     'City' => 'Cidade',
-    'Clients' => 'Clientes'
+    'Clients' => 'Clientes',
+    'Add Product' => 'Adicionar produto',
+    'Product name' => 'Nome do produto',
+    'Choose category' => 'Selecione a categoria',
+    'Short Description' => 'Descrição curta',
+    'Description' => 'Descrição',
 ];

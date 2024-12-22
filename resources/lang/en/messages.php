@@ -36,4 +36,10 @@ return [
     'Delivered Orders Amount' => 'Delivered Orders Amount',
     'Canceled Orders Amount' => 'Canceled Orders Amount',
     'Pending Orders Amount' => 'Pending Orders Amount',
+    'Product name' => 'Product name',
+    'Short Description' => 'Short Description',
+    'Description' => 'Description',
+    'click to browse' => 'click to browse',
+    'Drop your images here or select' => 'Drop your images here or select',
+    'Ordered' => 'Ordered',
 ];
