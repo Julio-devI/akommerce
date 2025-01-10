@@ -45,7 +45,7 @@ class AdminController extends Controller
         sum(if(status= 'ordered', total, 0)) As TotalOrderedAmount,
         sum(if(status= 'delivered', total, 0)) As TotalDeliveredAmount,
         sum(if(status= 'canceled', total, 0)) As TotalCanceledAmount
-        From Orders WHERE YEAR(created_at)=YEAR(NOW()) GROUP BY YEAR(created_at), MONTH(created_at), DATE_FORMAT(created_at, '%b')
+        From orders WHERE YEAR(created_at)=YEAR(NOW()) GROUP BY YEAR(created_at), MONTH(created_at), DATE_FORMAT(created_at, '%b')
         Order By MONTH(created_at)) D On D.MonthNo=M.id");
 
         $AmountM = implode(',', collect($monthlyDatas)->pluck('TotalAmount')->toArray());
