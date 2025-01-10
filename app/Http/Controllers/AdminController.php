@@ -32,7 +32,7 @@ class AdminController extends Controller
         sum(if(status= 'ordered', 1, 0)) As TotalOrdered,
         sum(if(status= 'delivered', 1, 0)) As TotalDelivered,
         sum(if(status= 'canceled', 1, 0)) As TotalCanceled
-        From Orders");
+        From orders");
 
         $monthlyDatas = DB::select("SELECT M.id as MonthNo, M.name As MonthName,
         IFNULL(D.TotalAmount, 0) As TotalAmount,
