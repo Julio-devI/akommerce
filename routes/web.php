@@ -103,9 +103,9 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
 
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/admin/profile/edit', [AdminController::class, 'profileEdit'])->name('admin.profile.edit');
-
-    Route::post('/set-locale', [LanguageController::class, 'switchLang'])->name('language.swap');
 });
+
+Route::post('/set-locale', [LanguageController::class, 'switchLang'])->name('language.swap');
 
 Route::get('paypal', [PaypalController::class, 'paypal'])->name('paypal');
 Route::get('success', [PaypalController::class, 'success'])->name('success');

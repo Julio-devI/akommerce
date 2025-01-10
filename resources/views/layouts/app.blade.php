@@ -475,6 +475,8 @@
                         </div>
                     </div>
 
+                    @include('components.language-switch')
+
                     @guest
                         <div class="header-tools__item hover-container">
                             <a href="{{ route('login') }}" class="header-tools__item">

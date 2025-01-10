@@ -71,4 +71,10 @@ return [
     'Choose category' => 'Selecione a categoria',
     'Short Description' => 'Descrição curta',
     'Description' => 'Descrição',
+    'You Might Like' => 'Você pode gostar',
+    'Hot Deals' => 'Vendas hoje',
+    'View All' => 'Ver todos',
+    'Featured Products' => 'Produtos destaques',
+    'Shop Now' => 'Comprar agora',
+    'Load More' => 'Carregar mais',
 ];

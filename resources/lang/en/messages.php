@@ -42,4 +42,10 @@ return [
     'click to browse' => 'click to browse',
     'Drop your images here or select' => 'Drop your images here or select',
     'Ordered' => 'Ordered',
+    'You Might Like' => 'You Might Like',
+    'Hot Deals' => 'Hot Deals',
+    'View All' => 'View All',
+    'Featured Products' => 'Featured Products',
+    'Shop Now' => 'Shop Now',
+    'Load More' => 'Load More',
 ];

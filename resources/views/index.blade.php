@@ -25,7 +25,7 @@
                                 <h6 class="text_dash text_uppercase fs-base fw-medium animate animate_fade animate_btt animate_delay-3">New Arrivals</h6>
                                 <h2 class="h1 fw-normal mb-0 animate animate_fade animate_btt animate_delay-5">{{ $slide->title }}</h2>
                                 <h2 class="h1 fw-bold mb-0 animate animate_fade animate_btt animate_delay-5">{{ $slide->subtitle }}</h2>
-                                <a href="{{ $slide->link }}" class="btn-link btn-link_lg default-underline fw-medium animate animate_fade animate_btt animate_delay-7">Shop Now</a>
+                                <a href="{{ $slide->link }}" class="btn-link btn-link_lg default-underline fw-medium animate animate_fade animate_btt animate_delay-7">{{__('messages.Shop Now')}}</a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
         <div class="container mw-1620 bg-white border-radius-10">
             <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
             <section class="category-carousel container">
-                <h2 class="section-title text-center mb-3 pb-xl-2 mb-xl-4">You Might Like</h2>
+                <h2 class="section-title text-center mb-3 pb-xl-2 mb-xl-4">{{__('messages.You Might Like')}}</h2>
 
                 <div class="position-relative">
                     <div class="swiper-container js-swiper-slider" data-settings='{
@@ -112,7 +112,7 @@
             <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
 
             <section class="hot-deals container">
-                <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Hot Deals</h2>
+                <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">{{__('messages.Hot Deals')}}</h2>
                 <div class="row">
                     <div
                         class="col-md-6 col-lg-4 col-xl-20per d-flex align-items-center flex-column justify-content-center py-4 align-items-md-start">
@@ -142,7 +142,7 @@
                             </div>
                         </div>
 
-                        <a href="{{ route('shop.index') }}" class="btn-link default-underline text-uppercase fw-medium mt-3">View All</a>
+                        <a href="{{ route('shop.index') }}" class="btn-link default-underline text-uppercase fw-medium mt-3">{{__('messages.View All')}}</a>
                     </div>
                     <div class="col-md-6 col-lg-8 col-xl-80per">
                         <div class="position-relative">
@@ -223,7 +223,7 @@
                             </div>
                             <div class="category-banner__item-content">
                                 <h3 class="mb-0">Blazers</h3>
-                                <a href="#" class="btn-link default-underline text-uppercase fw-medium">Shop Now</a>
+                                <a href="#" class="btn-link default-underline text-uppercase fw-medium">{{__('messages.Shop Now')}}</a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +236,7 @@
                             </div>
                             <div class="category-banner__item-content">
                                 <h3 class="mb-0">Sportswear</h3>
-                                <a href="#" class="btn-link default-underline text-uppercase fw-medium">Shop Now</a>
+                                <a href="#" class="btn-link default-underline text-uppercase fw-medium">{{__('messages.Shop Now')}}</a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +246,7 @@
             <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
 
             <section class="products-grid container">
-                <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Featured Products</h2>
+                <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">{{__('messages.Featured Products')}}</h2>
                 <div class="row">
                     @foreach($fproducts as $fproduct)
                         <div class="col-6 col-md-4 col-lg-3">
@@ -276,7 +276,7 @@
                 </div><!-- /.row -->
 
                 <div class="text-center mt-2">
-                    <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="#">Load More</a>
+                    <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="#">{{__('messages.Load More')}}</a>
                 </div>
             </section>
         </div>
