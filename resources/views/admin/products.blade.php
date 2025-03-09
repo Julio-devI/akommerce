@@ -63,7 +63,7 @@
                                             <img src="{{ asset('uploads/products/thumbnails') }}/{{ $product->image }}" alt="{{ $product->name }}" class="image">
                                         </div>
                                         <div class="name">
-                                            <a href="#" class="body-title-2">{{ $product->name }}</a>
+                                            <a href="{{ route('admin.product.edit', ['id'=>$product->id]) }}" class="body-title-2">{{ $product->name }}</a>
                                             <div class="text-tiny mt-3">{{ $product->slug }}</div>
                                         </div>
                                     </td>
