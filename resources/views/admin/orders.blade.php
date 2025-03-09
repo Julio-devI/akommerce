@@ -14,7 +14,7 @@
                         <i class="icon-chevron-right"></i>
                     </li>
                     <li>
-                        <div class="text-tiny">Orders</div>
+                        <div class="text-tiny">{{ __('Orders') }}</div>
                     </li>
                 </ul>
             </div>
@@ -39,17 +39,17 @@
                             <thead>
                             <tr>
                                 <th style="width:70px">OrderNo</th>
-                                <th class="text-center">Name</th>
-                                <th class="text-center">Phone</th>
+                                <th class="text-center">{{ __('Name') }}</th>
+                                <th class="text-center">{{ __('Phone') }}</th>
                                 <th class="text-center">Subtotal</th>
                                 <th class="text-center">Tax</th>
                                 <th class="text-center">Total</th>
 
                                 <th class="text-center">Status</th>
-                                <th class="text-center">Order Date</th>
+                                <th class="text-center">{{ __('Order Date') }}</th>
                                 <th class="text-center">Total Items</th>
                                 <th class="text-center">Delivered On</th>
-                                <th class="text-center">View more</th>
+                                <th class="text-center">{{ __('View more') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -63,11 +63,11 @@
                                         <td class="text-center">${{ $order->total }}</td>
                                         <td class="text-center">
                                             @if($order->status == 'delivered')
-                                                <span class="badge bg-success">Delivered</span>
+                                                <span class="badge bg-success">{{ __('Delivered') }}</span>
                                             @elseif($order->status == 'canceled')
-                                                <span class="badge bg-danger">Canceled</span>
+                                                <span class="badge bg-danger">{{ __('Canceled') }}</span>
                                             @else
-                                                <span class="badge bg-warning">Ordered</span>
+                                                <span class="badge bg-warning">{{ __('Ordered') }}</span>
                                             @endif
                                         </td>
                                         <td class="text-center">{{ $order->created_at }}</td>
